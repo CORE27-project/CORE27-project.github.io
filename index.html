@@ -13,7 +13,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .hero{padding-top:52px;padding-bottom:35px}.hero h1{margin-bottom:0}.resources{margin:24px 0 0}.results-space{min-height:220px}
 @media(max-width:640px){.hero{padding-top:38px;padding-bottom:30px}.results-space{min-height:150px}}
-.abstract{color:#4b4d50;line-height:1.85}.abstract + .abstract{margin-top:16px}
+.abstract{color:#4b4d50;line-height:1.85}.teaser-image{display:block;width:100%;height:auto}
 </style>
 </head>
 <body>
@@ -25,11 +25,8 @@
 <button class="resource" disabled aria-label="Paper, coming soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg>Paper<small>SOON</small></button>
 <button class="resource" disabled aria-label="Research code, coming soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 20"/></svg>Code<small>SOON</small></button>
 </div></header>
-<div class="wide teaser-wrap"><figure class="figure"><div class="placeholder teaser" role="img" aria-label="Placeholder for the CORE27 teaser figure"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="22" rx="2"/><circle cx="11" cy="12" r="2"/><path d="m4 24 8-8 6 5 5-6 6 7"/></svg><strong>Figure</strong></div></figure></div>
-<section class="band" id="abstract"><div class="narrow section"><h2>Abstract</h2><p class="abstract">Completing occluded regions in single-image novel view synthesis often introduces geometric inconsistency and cross-surface color mixing. To address these issues, we explicitly introduce 3D surface structure through depth completion and depth-guided rendering.</p>
-<p class="abstract">For depth completion, surface continuity guides how visible surfaces extend locally into occluded regions, while scene semantics guides the overall shapes and spatial relationships. Based on these complementary cues, we use conditional flow matching to generate multiple depth candidates. This maintains geometric coherence while accounting for uncertainty.</p>
-<p class="abstract">For rendering, Gaussians with adjacent image projections may belong to surfaces at different depths. Therefore, depth proximity to the completed surface helps identify relevant appearance features. Based on this principle, we design depth-layered attention to guide feature selection and fusion, reducing color mixing and preserving clear textures.</p>
-<p class="abstract">Experiments on two datasets demonstrate state-of-the-art performance in single-image novel view synthesis.</p></div></section>
+<div class="wide teaser-wrap"><figure class="figure"><img class="teaser-image" src="fig2_overall.svg" width="479" height="144" alt="CORE27 framework overview: flow-matching depth completion and depth-layered rendering for novel view synthesis." fetchpriority="high"></figure></div>
+<section class="band" id="abstract"><div class="narrow section"><h2>Abstract</h2><p class="abstract">Completing occluded regions in single-image novel view synthesis often introduces geometric inconsistency and cross-surface color mixing. To address these issues, we explicitly introduce 3D surface structure through depth completion and depth-guided rendering. For depth completion, surface continuity guides how visible surfaces extend locally into occluded regions, while scene semantics guides the overall shapes and spatial relationships. Based on these complementary cues, we use conditional flow matching to generate multiple depth candidates. This maintains geometric coherence while accounting for uncertainty. For rendering, Gaussians with adjacent image projections may belong to surfaces at different depths. Therefore, depth proximity to the completed surface helps identify relevant appearance features. Based on this principle, we design depth-layered attention to guide feature selection and fusion, reducing color mixing and preserving clear textures. Experiments on two datasets demonstrate state-of-the-art performance in single-image novel view synthesis.</p></div></section>
 <section class="wide section" id="results" aria-labelledby="results-heading"><h2 id="results-heading">Visual Results</h2><div class="results-space"><!-- Visualization content will be added here. --></div></section>
 </main>
 
